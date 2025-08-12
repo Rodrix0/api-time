@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: api-time
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    dockerCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: TZ
+        value: America/Argentina/Buenos_Aires
+    healthCheckPath: /time
+    autoDeploy: true
+    buildCommand: docker build -t api-time .
+    startCommand: docker run -p $PORT:3000 api-time
