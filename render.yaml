@@ -11,7 +11,7 @@ services:
       - key: PORT
         value: 3000
       - key: TZ
-        value: America/Argentina/Buenos_Aires
+        value: America/Argentina/Corrientes
     healthCheckPath: /time
     autoDeploy: true
     buildCommand: docker build -t api-time .
