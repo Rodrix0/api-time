@@ -9,7 +9,7 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-      - TZ=America/Argentina/Buenos_Aires
+      - TZ=America/Argentina/Corrientes
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/time', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
