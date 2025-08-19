@@ -1,5 +1,5 @@
 // Configuración de la API - Detecta automáticamente el entorno
-const API_BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://api-time.onrender.com';
+const API_BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://api-time-znh0.onrender.com';
 
 // Elementos del DOM
 const timeDisplay = document.getElementById('timeDisplay');
