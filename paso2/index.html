@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Digital - API de Tiempo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🕐 Reloj Digital</h1>
+        
+        <div id="timeDisplay" class="time-display hidden">
+            --:--:--
+        </div>
+        
+        <button id="getTimeBtn" class="btn">
+            Obtener Hora
+        </button>
+        
+        <div id="status" style="display: none;"></div>
+        
+        <div style="margin-top: 30px; font-size: 0.9rem; color: #666;">
+            <p>Presiona el botón para obtener la hora actual desde la API</p>
+            <p>La hora se actualiza solo cuando presionas el botón</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

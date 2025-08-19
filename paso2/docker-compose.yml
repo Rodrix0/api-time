@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # API de Tiempo
+  api-time:
+    build: ..
+    container_name: api-time
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build: .
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api-time
+    networks:
+      - app-network
+    restart: unless-stopped
+networks:
+  app-network:
+    driver: bridge
+

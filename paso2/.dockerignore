@@ -1,0 +1,22 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Git
+.git
+.gitignore
+
+# Archivos de Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Archivos de la API (no necesarios en el frontend)
+api-time/
+
+# Archivos de documentación
+README.md
+
+# Archivos temporales
+*.tmp
+*.log
